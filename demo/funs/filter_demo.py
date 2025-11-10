@@ -1,6 +1,6 @@
 # Filter demo
 
-def ispositive(n):
+def ispositive(n : int) -> bool:
     return n > 0
 
 
