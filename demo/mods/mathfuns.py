@@ -6,5 +6,10 @@ def iseven(num :int) -> bool:
 
 
 def ispositive(num :int) -> bool:
+    """
+    Checks whether the given number is positive
+    :param num: number to check
+    :return: True if positive, False otherwise
+    """
     return num > 0
 
