@@ -1,9 +1,16 @@
 class Student:
+    count = 0
+
+    @staticmethod
+    def get_count():
+        return Student.count
+
     def __init__(self, admno : int, name : str, totalfee : int, feepaid : int = 0):
         self.admno = admno
         self.name = name
         self.totalfee = totalfee
         self.feepaid = feepaid
+        Student.count += 1
 
     def getdue(self):
         return self.totalfee  - self.feepaid
@@ -19,4 +26,5 @@ s2 = Student(2, "Andy", 15000, 5000)
 s2.payment(10000)
 print(s2.getdue())
 
+print(Student.get_count())
 
