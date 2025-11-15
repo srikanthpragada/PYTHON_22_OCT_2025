@@ -9,8 +9,8 @@ class Person:
     def __eq__(self, other):
         return self.name == other.name and self.age == other.age
 
-    def __lt__(self, other):
-        return self.age < other.age
+    # def __lt__(self, other):
+    #     return self.age < other.age
 
 
 p1 = Person('Jason', 25)
@@ -23,6 +23,6 @@ print(str(p1))
 print(p1.__str__())
 print(p1 == p4)  # p1.__eq__(p4)
 
-for p in sorted(people):
+for p in sorted(people, key = lambda p : p.age):
     print(p)
 
