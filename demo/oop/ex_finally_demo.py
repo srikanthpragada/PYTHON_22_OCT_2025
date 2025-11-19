@@ -6,10 +6,10 @@ try:
     print('Marks :', marks[rollno - 1])
 except ValueError:
     print("Invalid number!")
-except IndexError:
-    print("Invalid rollno!")
-except Exception as ex:
-    print('Error :', ex)
+else:
+    print("Success")
+finally:
+    print('Finally!')
 
 print("The End!")
 
