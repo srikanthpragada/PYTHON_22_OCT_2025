@@ -1,3 +1,7 @@
+class StackEmptyError(Exception):
+    def __str__(self):
+        return 'Stack is empty!'
+
 class Stack:
     def __init__(self):
         self.data = []
@@ -6,9 +10,20 @@ class Stack:
         self.data.append(value)
 
     def pop(self):
+        """
+        Returns value at the top of the stack and removes it
+        If stack is empty, it raises StackEmptyError exception
+        :return: Value that is at the top of the stack
+        """
+        if self.isempty():
+            raise StackEmptyError()
+
         return self.data.pop()
 
     def peek(self):
+        if self.isempty():
+            raise StackEmptyError()
+
         return self.data[-1]
 
     def isempty(self):
@@ -27,6 +42,7 @@ class Stack:
 
 
 s = Stack()
+print(s.pop())
 s.push(10)
 s.push(20)
 
