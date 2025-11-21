@@ -1,4 +1,3 @@
-
 def validate_name(name : str):
     for c in name:
         if not (c.isalpha() or c.isspace()):
